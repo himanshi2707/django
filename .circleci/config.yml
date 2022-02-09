@@ -30,8 +30,8 @@ jobs:
             #kill -9 $PID
             #exit(0)
       - run:
-        name: Killing Gunicorn
-        command: |
+          name: Killing Gunicorn
+          command: |
             PID = ps -ef | grep "gunicorn" | awk 'NR==1{print $2}'
             kill -9 $PID
             exit(0)
